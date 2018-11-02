@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    <script>
+        // 开发
+
+        // window.httpUrl = 'http://auto-test.mobimedical.cn';
+        // window.staticUrl = '';
+
+        // 线上环境(同一个域内)
+        window.httpUrl='';
+        window.staticUrl='/newmachine';
+
+    </script>
+    
+    <object id="csharpActiveX" codebase="HardWareActivex.cab" classid="clsid:92CC0AB0-8FFD-40E4-8384-6A188B029C05" style="display: none"></object>
+    <bgsound id="snd_ie" src="" loop="1"></bgsound> 
+
+</head>
+<body>
+<div id="app">
+
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        //处理移动端点击事件300ms的延迟
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function () {
+                FastClick.attach(document.body);
+            }, false);
+        }
+    }
+
+    var HWA = document.getElementById("csharpActiveX");
+    if (HWA == null) {
+        alert("ActiveX异常:" + HWA);
+    }
+
+    // var closeActiveXObject = new ActiveXObject("Shell.Application.1"); //关机控件
+    
+    var closeActiveXObject = new ActiveXObject("wscript.shell");
+</script>
+
+<script type="text/javascript" src="fastclick.js?9fe63f87d6de4d514f48"></script><script type="text/javascript" src="app.js?9fe63f87d6de4d514f48"></script></body>
+
+</html>

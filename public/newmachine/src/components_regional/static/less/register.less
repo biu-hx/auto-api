@@ -1,0 +1,244 @@
+.registerWrap{
+  padding:35px; 
+  height: 604px; 
+  box-sizing: border-box; 
+  position: relative;
+}
+.pageinationWrap{
+  width:1082px; 
+  position: absolute; 
+  bottom: 30px;
+}
+// 医院列表
+.hospital_list{
+  width: 100%;
+  height: 438px;
+  position: relative;
+  font-size: 30px;
+  .hospital_item{
+    width: 333px;
+    height: 204px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 28px;
+    box-sizing: border-box;
+    line-height: 33px;
+    float: left;
+    margin-right: 40px;
+    span{
+      width: 100%;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:nth-child(3){
+      margin-right: 0
+    }
+    &:nth-child(6){
+      margin-right: 0
+    }
+    &:nth-child(n+4){
+      margin-top:35px
+    }
+    .hospital_logo{
+      margin-top: 15px;
+      height: 95px;
+      margin-bottom: 18px;
+      img{
+        max-width: 80%;
+        max-height: 95px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// 科室列表
+.department{
+  width: 100%;
+  height: 438px;
+  ul li{
+    float: left;
+    background-color: #fff;
+    width:255px;
+    height: 125px;
+    line-height: 36px;
+    border-radius: 6px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:0 15px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    &:nth-child(4n){
+      margin-right: 0
+    }
+    &:nth-child(n+5){
+      margin-top:30px
+    }
+  }
+}
+
+// 时间列表
+.dateList{
+  width: 100%;
+  height: 438px;
+  ul li{
+    float: left;
+    background-color: #fff;
+    width:255px;
+    height: 125px;
+    border-radius: 6px;
+    font-size: 30px;
+    text-align: center;
+    padding:0 15px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    &:nth-child(4n){
+      margin-right: 0
+    }
+    &:nth-child(n+5){
+      margin-top:30px
+    }
+    & strong{
+      display: block;
+      font-weight: normal;
+      margin-top: 25px
+    }
+  }
+}
+// 时段选择
+.period_modal{
+  position: fixed;
+  z-index: 100;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  left: 0;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  dl{
+    background-color: #fff;
+    border-radius: 6px;
+    width:870px;
+    height: 530px;
+    position: relative;
+    overflow: hidden;
+    dt{
+      color: #FD3F3B;
+      font-size: 62px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 260px;
+    }
+    dd{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin:0;
+      padding:20px 4%;
+      box-sizing: border-box;
+      p{
+        width:30%; 
+        font-size: 34px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border:#bbb 1px solid;
+        border-radius: 6px;
+        margin:0 15px;
+      }
+    }
+    dd.close{
+      position: absolute;
+      z-index: 110;
+      right:0;
+      top:0;
+      padding:0;
+      height: 80px;
+      width:80px;
+      background:url(../images/close_modal.png) no-repeat center
+    }
+  }
+}
+
+// 医生列表
+.doctors_list{
+  width: 100%;
+  height: 438px;
+  position: relative;
+  font-size: 30px;
+  color: #333;
+  .item{
+    width: 333px;
+    height: 204px;
+    background: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    line-height: 33px;
+    float: left;
+    margin-right: 40px;
+    .basic{
+      display: flex;
+      padding:20px 15px;
+      align-items: center;
+      position: relative;
+      .head{
+        width:70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        img{width:100%;}
+      }
+      .name{
+        margin-left: 15px;
+        flex: 1;
+        strong{
+          font-size: 28px;
+        }
+        p{
+          font-size: 20px;
+          width:218px;
+          margin-top: 4px;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap
+        }
+      }
+      em{
+        position: absolute;
+        right: 15px;
+        top: 28px;
+        font-style: normal;
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        padding:0 6px; 
+        border-radius: 5px;
+        background-color: #01A815;
+        font-size: 16px;
+        color: #fff;
+
+      }
+    }
+    .info{
+      padding:10px 15px;
+      font-size: 20px;
+      border-top: #ddd 1px solid
+    }
+    &:nth-child(3n){
+      margin-right: 0
+    }
+    &:nth-child(n+4){
+      margin-top:35px
+    }
+  }
+}

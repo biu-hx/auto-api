@@ -1,0 +1,182 @@
+// 注意事项 CSS
+.attentions{
+    display: flex;
+    justify-content: space-between;
+    margin:0 35px;
+}
+.attentions .needs{
+    width:600px;
+    height: 530px;
+}
+.attentions .arrow {
+    height: 72px;
+    text-align: center;
+}
+.attentions .arrow:after,
+.attentions .arrow:before{
+    content: "";
+    display: block;
+    margin:0 auto;
+    width:11px;
+    height: 11px;
+    border-right:#0490EC 2px solid;
+    border-bottom:#0490EC 2px solid;
+    transform:rotate(45deg);
+    position: relative;
+    top:20px;
+}
+.attentions .needs dl dt, .attentions .needs dl dd{margin:0; padding:0;}
+.attentions .needs dl.sendAddr{
+    margin:0;
+    border:#9BCEEE 1px solid;
+    border-radius: 6px;
+    background-color: #CBE9FC;
+    font-size: 26px;
+    padding:15px 20px;
+    line-height: 150%
+}
+
+.attentions .needs dl.sendAddr dd{margin-top: 15px}
+.attentions .needs dl.sendAddr dd span{color: red}
+.attentions .needs dl.orderingTips{
+    border:#ddd 1px solid;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 6px;
+    font-size: 22px;
+    padding:16px 20px;
+    line-height: 160%;
+    margin:0;
+}
+
+.attentions .needs dl.orderingTips dd{font-size: 20px; padding-top: 10px}
+
+
+.attentions .desc{
+    width:490px;
+    height: 530px;
+    border:#ddd 1px solid;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 6px;
+    padding:15px 20px;
+    box-sizing: border-box;
+}
+
+.attentions .desc h2{font-size: 24px; font-weight: normal; margin:0; padding:0; line-height: 140%}
+.attentions .desc dl{
+    font-size: 20px;
+    line-height: 160%
+}
+
+.attentions .desc dl, .attentions .desc dl dt, .attentions .desc dl dd{margin:0; padding:0;}
+.attentions .desc dl dt{padding: 15px 0 2px 0;}
+
+// 选择餐品 CSS
+
+.chooseTimeBar{
+    height: 70px;
+    line-height: 70px;
+    border:#ddd 1px solid;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+.chooseTimeBar .time{width:200px; text-align: center;}
+.chooseTimeBar .time:after{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 7px solid #999;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: relative;
+    top:-2px;
+}
+.chooseTimeBar .mealTimes{flex: 1; display: flex;}
+.chooseTimeBar .mealTimes span{
+    display: block;
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+.chooseTimeBar .mealTimes span:before{
+    content: "";
+    display: block;
+    width:1px;
+    height: 24px;
+    background-color: rgba(0,0,0,.1);
+    position: absolute;
+    left: 0;
+    top:50%;
+    margin-top: -12px;
+}
+.chooseTimeBar .mealTimes span.active{background-color: #C3E5FB; color: #0183D1; line-height: 67px; border-bottom:#0183D1 3px solid; box-sizing: border-box;}
+.mealList{margin-top: 20px; display:flex;}
+.mealList .mealMenu{
+    width:170px;
+    height: 500px;
+    border:#ddd 1px solid;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.mealList .mealMenu li{display: block; text-align: center; font-size: 22px; padding:20px 0; border-bottom: rgba(0,0,0,.06) 1px solid;}
+
+.mealList .mealMenu li.active{background-color: #C3E5FB; color: #0183D1; border-right:#0183D1 3px solid; box-sizing: border-box;}
+
+.mealList .foods{
+    flex: 1;
+    padding-left: 30px;
+}
+.mealList .foodList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mealList .foodList li{
+    width: 48.8%;
+    border:#ddd 1px solid;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    display: flex;
+    padding:10px 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.mealList .foodList li:nth-child(n+3){
+    margin-top: 15px
+}
+
+.mealList .foodList li .pic{width:96px; height: 96px; border-radius: 4px; overflow: hidden;}
+.mealList .foodList li .pic img{width:100%;}
+.mealList .foodList li .disc{
+    padding-left: 15px;
+    flex: 1;
+    position: relative;
+}
+.mealList .foodList li .disc dl, .mealList .foodList li .disc dt, .mealList .foodList li .disc dd{
+    margin:0; padding:0;
+}
+.mealList .foodList li .disc dt{font-size: 28px;}
+.mealList .foodList li .disc dd{font-size: 18px; color: #666}
+.mealList .foodList li .disc dd:last-child{color: red; margin-top: 5px}
+.mealList .foodList li .disc dd:last-child em{font-style: normal; font-size: 28px}
+
+.mealList .foodList li .disc .addCart{position: absolute; right:0; bottom:0; display: flex; align-items: center;}
+.mealList .foodList li .disc .addCart span{display: block; width:40px; text-align: center; font-size: 24px; color: #0497DD}
+
+.mealFooter{display: flex; align-items: center; margin-top: 25px}
+.mealFooter .cart{flex: 1; display: flex; align-items: center;}
+.mealFooter .cart img{width:70px; height: 70px;}
+.mealFooter .cart p{display: block; position: relative; padding-left: 20px;}
+.mealFooter .cart p strong{color: red; display: block; line-height: 22px}
+.mealFooter .cart p strong em{font-style: normal; font-size: 32px}
+.mealFooter .cart p span{display: block; color: #666; font-size: 22px;}
+.mealFooter .cart p small{position: absolute; display: block; width:24px; height: 24px; line-height: 24px; text-align: center; background-color: red; border-radius: 50%; color: #fff; font-size: 16px; left: -20px; top:-5px;}
+.mealFooter .pagination{display: flex;}
+.mealFooter .pagination button{margin-left: 20px}

@@ -1,0 +1,548 @@
+html,
+body,
+div,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    background: #fff;
+    font-size: 16px;
+    font-family: "Microsoft YaHei" !important;
+}
+
+a,
+button,
+input,
+textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-modify: read-write-plaintext-only;
+}
+
+.content {
+    width: 1190px;
+    height: 720px;
+    margin: 40px 0 0 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 36px;
+    color: #000;
+    font-weight: bolder;
+}
+
+.title p {
+    margin-left: 35px;
+}
+
+.count-time {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 26px;
+    color: #ff001b;
+    background: url('../img/count-time-bg.png')no-repeat;
+    background-size: 100% 100%;
+    font-weight: normal;
+}
+
+.demonstration-box {
+    background: #fff;
+    width: 1125px;
+    height: 600px;
+    border-radius: 10px;
+    border: 1px solid #d2d5d5;
+    margin-left: 35px;
+    overflow: hidden;
+}
+.demonstration-box-keyboard{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box-head {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.head-title span {
+    font-size: 30px;
+    padding: 0 5px;
+    color: #e80300;
+}
+.no-record-icon {
+    width: 100%;
+    text-align: center;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.no-record-text {
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    margin-top: 60px;
+    color: #666;
+}
+
+.no-record-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+}
+
+.research-btn {
+    width: 165px;
+    height: 52px;
+    background: #018ede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.no-data-img {
+    width: 328px;
+    height: 215px;
+}
+
+
+/* 提醒弹框组件样式，已封装 */
+
+.bomb-box {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 2, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bomb-content {
+    width: 480px;
+    min-height: 284px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bomb-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background: #007ed8;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.bomb-header-title {
+    font-size: 16px;
+    margin-left: 22px;
+}
+
+.bomb-close-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+.bomb-body {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ff0300;
+}
+
+.bomb-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bomb-cancel-btn {
+    width: 136px;
+    height: 45px;
+    border-radius: 45px;
+    background: #ff0300;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 68px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bomb-confirm-btn {
+    width: 136px;
+    height: 45px;
+    border-radius: 45px;
+    background: #007ed8;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 68px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 弹框组件样式，已封装 */
+
+
+/* 支付弹框组件样式 */
+
+.model-frame {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 2, 0.6);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 513px;
+    background: #fff;
+    z-index: 999;
+    border-radius: 15px;
+}
+
+.box-header {
+    width: 100%;
+    height: 53px;
+    background: #007ed9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.box-info {
+    font-size: 22px;
+    margin-left: 22px;
+    color: #fff;
+}
+
+.close-btn {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.box-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.box-content-entry {
+    width: 217px;
+    margin-top: 30px;
+    margin-left: 42px;
+    overflow: hidden;
+}
+
+.box-content-qrcode {
+    width: 240px;
+}
+
+.start-pay {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-top: 0;
+}
+
+.pay-info-type {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.pay-info-type:last-child {
+    margin-bottom: 20px;
+}
+
+.pay-info-type span {
+    color: #fb0000;
+}
+
+.scan {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pay-qrcode {
+    width: 160px;
+    height: 160px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.pay-count-time {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pay-count-time span {
+    color: #fb0000;
+    padding: 0 5px;
+}
+
+.payed-img {
+    width: 84px;
+    height: 84px;
+    margin-top: 60px;
+    margin-left: 78px;
+}
+
+.other-payed-img {
+    width: 84px;
+    height: 84px;
+    margin-top: 40px;
+    margin-left: 78px;
+}
+
+.payed-success-info {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #45b035;
+    text-align: center;
+}
+
+.payed-waiting {
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fb0000;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.payed-waiting span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    right: -240px;
+    top: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    animation-name: waiting;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes waiting {
+    0% {
+        right: -240px;
+    }
+    25% {
+        right: -180px;
+    }
+    50% {
+        right: -120px;
+    }
+    75% {
+        right: -60px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+.payed-fail-info {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fb0000;
+    text-align: center;
+}
+
+.info-body {
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+}
+
+.info-body-text {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #f08400;
+    margin-bottom: 30px;
+}
+
+.info-logo {
+    width: 105px;
+    height: 105px;
+    margin-top: 30px;
+}
+
+
+/* loading组件 */
+
+.loading-box {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 2, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-content {
+    width: 350px;
+    height: 175px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loading-text {
+    width: 330px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 10px;
+    color: #222
+}
+
+#canvas {
+    width: 270px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+
+/* 分页组件样式 */
+
+.page-controll {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-page {
+    width: 165px;
+    height: 52px;
+    background: #018ede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.page-num {
+    width: 145px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #009ee6;
+}
+
+.next-page {
+    width: 165px;
+    height: 52px;
+    background: #018ede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.unflip {
+    background: #787f82;
+}
